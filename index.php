@@ -40,7 +40,8 @@ echo '
 $print = TRUE;
 $validator = new Validator;
 $data = json_decode($json_root);
-$validator->validate($data, (object)['$ref' => 'https://getcomposer.org/schema.json']);
+$schema = (object) ['$ref' => 'https://getcomposer.org/schema.json'];
+$validator->validate($data, $schema);
 if (!$validator->isValid()) {
   $print = FALSE;
   foreach ($validator->getErrors() as $error) {
