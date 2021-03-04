@@ -1,6 +1,8 @@
 # Composer dependency tree visualization
 This is a simple PHP library that will take a standard ``composer.json`` file and ``composer.lock`` file and generate a depedency tree, using [D3JS](https://d3js.org/).
 
+Full demo at https://dependency.markfullmer.com
+
 ![Screenshot of dependency tree](dependencytree.png)
 
 ## Basic usage
