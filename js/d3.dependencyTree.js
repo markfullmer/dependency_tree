@@ -2,7 +2,7 @@
 
 function dependencyTree(treeData, target) {
 // Set the dimensions and margins of the diagram
-var margin = {top: 20, right: 90, bottom: 30, left: 130},
+var margin = {top: 20, right: 90, bottom: 30, left: 150},
     width = 1200 - margin.left - margin.right,
     height = 600 - margin.top - margin.bottom;
 
@@ -77,6 +77,7 @@ function update(source) {
 
   // Add labels for the nodes
   nodeEnter.append('text')
+      .attr('style', 'font:12px sans-serif')
       .attr("dy", ".31em")
       .attr('cursor', 'pointer')
       .attr("x", function(d) {
@@ -135,6 +136,10 @@ function update(source) {
   // Enter any new links at the parent's previous position.
   var linkEnter = link.enter().insert('path', "g")
       .attr("class", "link")
+      .attr('fill', 'none')
+      .attr('stroke', '#555')
+      .attr('stroke-opacity', '0.4')
+      .attr('stroke-width', '1.5')
       .attr('d', function(d){
         var o = {x: source.x0, y: source.y0}
         return diagonal(o, o)

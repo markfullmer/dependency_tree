@@ -34,8 +34,9 @@ echo '
       </div>
     </div>
   </form>
+  <figure id="tree"></figure>
 </div>
-<figure id="tree"></figure>';
+';
 
 $print = TRUE;
 $validator = new Validator;

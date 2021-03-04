@@ -1,21 +1,19 @@
-<html>
-
+<!doctype html>
+<html lang="en">
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="This is a simple PHP library that will take a standard composer.json file and composer.lock file and generate a depedency tree, using D3JS.">
+  <meta property="og:title" content="Composer dependency tree, by Mark Fullmer">
+  <meta property="og:image"
+    content="https://dependency.markfullmer.com/dependencytree.png">
+  <meta property="og:description"
+    content="This is a simple PHP library that will take a standard composer.json file and composer.lock file and generate a depedency tree, using D3JS." />
+  <meta property="og:url" content="https://dependency.markfullmer.com/" />
+  <meta property="og:site_name"
+    content="Composer dependency tree, by Mark Fullmer" />
   <title>Composer dependency tree</title>
-  <style>
-    .node circle {
-      fill: #fff;
-    }
-    .node text {
-      font: 12px sans-serif;
-    }
-    .link {
-      fill: none;
-      stroke: #555;
-      stroke-opacity: 0.4;
-      stroke-width: 1.5;
-    }
-  </style>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/normalize.css">
@@ -23,6 +21,16 @@
   <link rel="stylesheet" href="./css/custom.css">
   <link rel="stylesheet" href="./css/codemirror/lib/codemirror.css">
   <link rel="stylesheet" href="./css/codemirror/theme/ambiance.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org/", 
+    "@type": "Product", 
+    "name": "Composer dependency tree",
+    "image": "https://dependency.markfullmer.com/dependencytree.png",
+    "description": "This is a simple PHP library that will take a standard composer.json file and composer.lock file and generate a depedency tree, using D3JS.",
+    "brand": "Mark Fullmer"
+  }
+  </script>
 </head>
 
 <body>
@@ -31,6 +39,6 @@
   <script src="./css/codemirror/lib/codemirror.js"></script>
   <script src="./css/codemirror/mode/javascript/javascript.js"></script>
 <nav class="container">
+  <a style="float:right" href="https://github.com/markfullmer/dependencytree">Source code</a>
   <h1 class="heading">Composer dependency tree generator</h1>
-  <a href="https://github.com/markfullmer/dependencytree">Source code</a>
 </nav>

@@ -4,7 +4,8 @@
 nav {
   border-bottom: 1px solid #3d3d3d;
 }
-.Codemirror {
+.Codemirror .c-s-ambiance {
   font-size: 1rem!important;
+  height: 200px;
 }
 
