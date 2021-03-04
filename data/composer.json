@@ -1,0 +1,75 @@
+{
+  "name": "sample/project",
+  "description": "Demonstration composer file for a Drupal site",
+  "type": "project",
+  "license": "MIT",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    },
+    {
+      "type": "path",
+      "url": "upstream-configuration"
+    }
+  ],
+  "require": {
+    "drupal/simplesamlphp_auth": "^3.2",
+    "drush/drush": "^10",
+    "pantheon-upstreams/upstream-configuration": "*"
+  },
+  "conflict": {
+    "drupal/drupal": "*"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "extra": {
+    "installer-paths": {
+      "web/core": [
+        "type:drupal-core"
+      ],
+      "web/libraries/{$name}": [
+        "type:drupal-library"
+      ],
+      "web/modules/composer/{$name}": [
+        "type:drupal-module"
+      ],
+      "web/profiles/composer/{$name}": [
+        "type:drupal-profile"
+      ],
+      "web/themes/composer/{$name}": [
+        "type:drupal-theme"
+      ],
+      "drush/Commands/contrib/{$name}": [
+        "type:drupal-drush"
+      ],
+      "web/private/scripts/quicksilver/{$name}/": [
+        "type:quicksilver-script"
+      ]
+    },
+    "composer-exit-on-patch-failure": true,
+    "patchLevel": {
+      "drupal/core": "-p2"
+    },
+    "drupal-scaffold": {
+      "allowed-packages": [
+        "pantheon-systems/drupal-integrations"
+      ],
+      "locations": {
+        "web-root": "./web"
+      },
+      "file-mapping": {
+        "[project-root]/.editorconfig": false,
+        "[project-root]/pantheon.upstream.yml": false,
+        "[project-root]/.gitattributes": false
+      }
+    }
+  },
+  "config": {
+    "preferred-install": "dist",
+    "sort-packages": true,
+    "platform": {
+      "php": "7.4"
+    }
+  }
+}

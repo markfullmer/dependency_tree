@@ -1,0 +1,23 @@
+{
+    "name": "markfullmer/dependencytree",
+    "description": "Generate a Composer dependency tree visualization",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mark Fullmer",
+            "email": "mfullmer@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "markfullmer\\": [
+                "src/",
+                "test/"
+            ]
+        }
+    },
+    "require": {
+        "justinrainbow/json-schema": "^5.2"
+    }
+}
