@@ -5,6 +5,11 @@ This is a simple PHP library that will take a standard ``composer.json`` file an
 
 Full demo at https://dependency.markfullmer.com
 
+
+### Contents
+  * [Basic usage](#basic-usage)
+  * [Similar libraries for visualizing Composer dependencies](#similar-libraries-for-visualizing-composer-dependencies)
+
 ## Basic usage
 
 1. Require this library to your PHP project:
@@ -41,3 +46,7 @@ use markfullmer\DependencyTree;
     </script>
   ';
 ```
+
+## Similar libraries for visualizing Composer dependencies
+- https://github.com/fzaninotto/DependencyWheel - "This experiment visualizes package dependencies using an interactive disc. Each disc section represents a dependency, and links between arcs materialize these dependencies."
+- https://github.com/clue/graph-composer : "Graph visualization for your project's `composer.json` and its dependencies"
