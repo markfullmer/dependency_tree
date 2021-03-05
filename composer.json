@@ -1,5 +1,5 @@
 {
-    "name": "markfullmer/dependencytree",
+    "name": "markfullmer/dependency_tree",
     "description": "Generate a Composer dependency tree visualization",
     "type": "project",
     "license": "MIT",
