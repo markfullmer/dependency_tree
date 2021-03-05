@@ -1,4 +1,0 @@
-name: d3
-recipe: lamp
-config:
-  webroot: .

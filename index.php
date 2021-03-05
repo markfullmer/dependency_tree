@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * @file
+ * Demo page for Composer dependency tree.
+ */
+
 require 'vendor/autoload.php';
 
 use JsonSchema\Validator;
@@ -41,15 +46,16 @@ echo '
     </div>
     <div class="row">
       <div class="twelve columns">
-        <label><input name="version" type="checkbox" ' .$checked . ' />Display version information</label>
-        <label><input name="expanded" type="checkbox" ' .$expanded . ' />Begin with tree expanded</label>
+        <label><input name="version" type="checkbox" ' . $checked . ' />Display version information</label>
+        <label><input name="expanded" type="checkbox" ' . $expanded . ' />Begin with tree expanded</label>
         <input type="submit" name="submit" value="Generate tree" />
       </div>
     </div>
   </form>
+  <span>Click colored circles to expand/collapse dependencies.</span>
   <figure id="tree"></figure>
 </div>
-<script> 
+<script>
   var json = document.getElementById("json");
   var myCodeMirror = CodeMirror.fromTextArea(json, { "theme": "ambiance" });
   var lock = document.getElementById("lock");
@@ -58,7 +64,7 @@ echo '
 ';
 
 $print = TRUE;
-$validator = new Validator;
+$validator = new Validator();
 $data = json_decode($json_root);
 $schema = (object) ['$ref' => 'https://getcomposer.org/schema.json'];
 $validator->validate($data, $schema);
@@ -79,7 +85,7 @@ if ($print) {
   $data = DependencyTree::generateTree($json_root, $json_lock, $version);
   echo '
     <script>
-      dependencyTree('. $data .', "figure#tree", ' . $expand . ');
+      dependencyTree(' . $data . ', "figure#tree", ' . $expand . ');
     </script>
   ';
 }

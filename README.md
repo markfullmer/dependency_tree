@@ -1,23 +1,32 @@
 # Composer dependency tree visualization
+
 This is a simple PHP library that will take a standard ``composer.json`` file and ``composer.lock`` file and generate a dependency tree, using the [D3JS](https://d3js.org/) visualization known as the [collapsible tree](https://observablehq.com/@d3/collapsible-tree).
-### Contents
+
+## Contents
+
 * [Demonstration](#demo)
 * [Simple tree](#simple-tree)
 * [Complex tree](#complex-tree)
 * [Basic usage](#basic-usage)
 * [Similar libraries](#similar-libraries)
 
-### Demo
+## Demo
+
 Full demo at https://dependency.markfullmer.com
-### Simple tree
+
+## Simple tree
+
 ![Screenshot of dependency tree](composer-dependency-tree.png)
-### Complex tree
+
+## Complex tree
+
 ![Screenshot of complex dependency tree](complex-composer-dependency-tree.jpg)
+
 ## Basic usage
 
 1. Require this library to your PHP project:
 
-```
+```bash
 composer require markfullmer/dependency_tree
 ```
 
@@ -51,5 +60,7 @@ use markfullmer\DependencyTree;
 ```
 
 ## Similar libraries
-- https://github.com/fzaninotto/DependencyWheel - "This experiment visualizes package dependencies using an interactive disc. Each disc section represents a dependency, and links between arcs materialize these dependencies."
-- https://github.com/clue/graph-composer : "Graph visualization for your project's `composer.json` and its dependencies"
+
+* https://github.com/fzaninotto/DependencyWheel : "This experiment visualizes package dependencies using an interactive disc. Each disc section represents a dependency, and links between arcs materialize these dependencies."
+
+* https://github.com/clue/graph-composer : "Graph visualization for your project's `composer.json` and its dependencies"

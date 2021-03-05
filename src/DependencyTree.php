@@ -5,7 +5,7 @@ namespace markfullmer;
 /**
  * Class DependencyTree.
  *
- * Given a valid composer.json & composer.lock, generate an array that can be used by D3JS.
+ * Given composer.json & composer.lock, generate an array usable by D3JS.
  *
  * @author markfullmer <mfullmer@gmail.com>
  *
@@ -19,14 +19,14 @@ class DependencyTree {
    * Main generation method.
    *
    * @param string $json_root
-   *    The composer.json file as a string.
+   *   The composer.json file as a string.
    * @param string $json_lock
-   *    The composer.lock file as a string.
+   *   The composer.lock file as a string.
    * @param bool $version
-   *    Whether or not to print version information.
-   * 
+   *   Whether or not to print version information.
+   *
    * @return array
-   *    The nested array of dependencies.
+   *   The nested array of dependencies.
    */
   public static function generateTree($json_root, $json_lock, $version) {
     $recursion_level = 0;
@@ -58,18 +58,18 @@ class DependencyTree {
    * Recursive function to create a tree of dependencies.
    *
    * @param array $packages
-   *    An array of packages, keyed by name, including requirements & version.
-   * @param [type] $key
-   *    The name of a specific package.
-   * @param [type] $recursion_level
-   *    Internal marker to prevent memory errors due to recursion loops.
+   *   An array of packages, keyed by name, including requirements & version.
+   * @param string $key
+   *   The name of a specific package.
+   * @param int $recursion_level
+   *   Internal marker to prevent memory errors due to recursion loops.
    * @param bool $version
-   *    Whether or not the version number should be printed.
-   * 
+   *   Whether or not the version number should be printed.
+   *
    * @return array
-   *    A tree, consisting of the specified packages their children.
+   *   A tree, consisting of the specified packages their children.
    */
-  public static function getChildren($packages, $key, $recursion_level, $version) {
+  public static function getChildren(array $packages, $key, $recursion_level, $version) {
     $requirements = [];
     if ($recursion_level > 4) {
       return [
@@ -85,7 +85,7 @@ class DependencyTree {
           $children = self::getChildren($packages, $package, $recursion_level, $version);
           $name = $package;
           if ($version && isset($packages[$package]['version'])) {
-            // Some packages in a composer.lock file will not provide version numbers.
+            // Some packages in a composer.lock won't provide version numbers.
             $name .= ' ' . $packages[$package]['version'];
           }
           $requirements[] = [
@@ -105,17 +105,17 @@ class DependencyTree {
    * Derive desired information from composer.lock file.
    *
    * @param array $lock
-   *    The composer.lock file, converted to a PHP array.
-   * 
-   * @return void
-   *    An array of packages, keyed by name, including requirements & version.
+   *   The composer.lock file, converted to a PHP array.
+   *
+   * @return array
+   *   An array of packages, keyed by name, including requirements & version.
    */
-  public static function parseLockFile($lock) {
+  public static function parseLockFile(array $lock) {
     // Generate information for packages from the composer.lock file.
     foreach ($lock['packages'] as $package) {
-      $packages{$package['name']} = [
+      $packages[$package['name']] = [
         'require' => $package['require'] ?? [],
-        'version' => $package['version']
+        'version' => $package['version'],
       ];
     }
     return $packages;

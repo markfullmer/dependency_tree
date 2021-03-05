@@ -71,8 +71,9 @@ function dependencyTree(data, target, expand) {
 
     nodeEnter.append("circle")
       .attr("r", 6)
-      .attr("fill", d => d._children ? "#bf5700" : "#555")
-      .attr("stroke-width", 10);
+      .attr("fill", d => d._children ? "#bf5700" : "#fff")
+      .attr("stroke", "#3d3d3d")
+      .attr("stroke-width", 1);
 
     nodeEnter.append("text")
       .attr("dy", "0.31em")
