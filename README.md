@@ -10,7 +10,7 @@ Full demo at https://dependency.markfullmer.com
 1. Require this library to your PHP project:
 
 ```
-composer require markfullmer/dependencytree
+composer require markfullmer/dependency_tree
 ```
 
 2. Ensure the library is autoloaded in your PHP file:
