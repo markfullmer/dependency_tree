@@ -1,5 +1,7 @@
 .heading {
   font-size: 3rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
 }
 nav {
   border-bottom: 1px solid #3d3d3d;
@@ -8,4 +10,16 @@ nav {
   font-size: 1rem!important;
   height: 200px;
 }
-
+input[type="checkbox"] {
+  margin-right: 1rem;
+}
+input[type="submit"] {
+  display: block;
+}
+figure#tree {
+  float:left;
+  width:-webkit-fill-available;
+  overflow-y: auto;
+  border: 1px solid #bbb;
+  padding: 1rem;
+}

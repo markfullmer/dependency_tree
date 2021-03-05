@@ -1,194 +1,139 @@
 // This was derived from https://bl.ocks.org/d3noob/43a860bc0024792f8803bba8ca0d5ecd .
 
-function dependencyTree(treeData, target) {
-// Set the dimensions and margins of the diagram
-var margin = {top: 20, right: 90, bottom: 30, left: 150},
-    width = 1200 - margin.left - margin.right,
-    height = 600 - margin.top - margin.bottom;
+function dependencyTree(data, target, expand) {
+  console.log(expand);
 
-// append the svg object to the body of the page
-// appends a 'group' element to 'svg'
-// moves the 'group' element to the top left margin
-var svg = d3.select(target).append("svg")
-    .attr("width", width + margin.right + margin.left)
-    .attr("height", height + margin.top + margin.bottom)
-  .append("g")
-    .attr("transform", "translate("
-          + margin.left + "," + margin.top + ")");
+  const root = d3.hierarchy(data);
 
-var i = 0,
-    duration = 750,
-    root;
-
-// declares a tree layout and assigns the size
-var treemap = d3.tree().size([height, width]);
-
-// Assigns parent, children, height, depth
-root = d3.hierarchy(treeData, function(d) { return d.children; });
-root.x0 = height / 2;
-root.y0 = 0;
-
-// Collapse after the second level
-root.children.forEach(collapse);
-
-update(root);
-
-// Collapse the node and all it's children
-function collapse(d) {
-  if(d.children) {
-          d._children = d.children
-    d._children.forEach(collapse)
-    d.children = null
-  }
-}
-
-function update(source) {
-
-  // Assigns the x and y position for the nodes
-  var treeData = treemap(root);
-
-  // Compute the new tree layout.
-  var nodes = treeData.descendants(),
-      links = treeData.descendants().slice(1);
-
-  // Normalize for fixed-depth.
-  nodes.forEach(function(d){d.y = d.depth * 180});
-
-  // ****************** Nodes section ***************************
-
-  // Update the nodes...
-  var node = svg.selectAll('g.node')
-      .data(nodes, function(d) {return d.id || (d.id = ++i); });
-
-  // Enter any new modes at the parent's previous position.
-  var nodeEnter = node.enter().append('g')
-      .attr('class', 'node')
-      .attr("transform", function(d) {
-        return "translate(" + source.y0 + "," + source.x0 + ")";
-    })
-    .on('click', click);
-
-  // Add Circle for the nodes
-  nodeEnter.append('circle')
-      .attr('class', 'node')
-      .attr("r", 2.5)
-      .attr("fill", d => d._children ? "#555" : "#999")
-      .attr("stroke-width", 10);
-
-  // Add labels for the nodes
-  nodeEnter.append('text')
-      .attr('style', 'font:12px sans-serif')
-      .attr("dy", ".31em")
-      .attr('cursor', 'pointer')
-      .attr("x", function(d) {
-          return d.children || d._children ? -15 : 15;
-      })
-      .attr("text-anchor", function(d) {
-          return d.children || d._children ? "end" : "start";
-      })
-      .text(function(d) { return d.data.name; })
-    .clone(true).lower()
-    .attr("stroke-linejoin", "round")
-    .attr("stroke-width", 3)
-    .attr("stroke", "white");
-
-  // UPDATE
-  var nodeUpdate = nodeEnter.merge(node);
-
-  // Transition to the proper position for the node
-  nodeUpdate.transition()
-    .duration(duration)
-    .attr("transform", function(d) {
-        return "translate(" + d.y + "," + d.x + ")";
-     });
-
-  // Update the node attributes and style
-  nodeUpdate.select('circle.node')
-    .attr('r', 4)
-    .style("fill", function(d) {
-      return d._children ? "#bf5700" : "#999";
-    })
-    .attr('cursor', 'pointer');
-
-
-  // Remove any existing nodes
-  var nodeExit = node.exit().transition()
-      .duration(duration)
-      .attr("transform", function(d) {
-          return "translate(" + source.y + "," + source.x + ")";
-      })
-      .remove();
-
-  // On exit reduce the node circles size to 0
-  nodeExit.select('circle')
-    .attr('r', 1e-6);
-
-  // On exit reduce the opacity of text labels
-  nodeExit.select('text')
-    .style('fill-opacity', 1e-6);
-
-  // ****************** links section ***************************
-
-  // Update the links...
-  var link = svg.selectAll('path.link')
-      .data(links, function(d) { return d.id; });
-
-  // Enter any new links at the parent's previous position.
-  var linkEnter = link.enter().insert('path', "g")
-      .attr("class", "link")
-      .attr('fill', 'none')
-      .attr('stroke', '#555')
-      .attr('stroke-opacity', '0.4')
-      .attr('stroke-width', '1.5')
-      .attr('d', function(d){
-        var o = {x: source.x0, y: source.y0}
-        return diagonal(o, o)
-      });
-
-  // UPDATE
-  var linkUpdate = linkEnter.merge(link);
-
-  // Transition back to the parent element position
-  linkUpdate.transition()
-      .duration(duration)
-      .attr('d', function(d){ return diagonal(d, d.parent) });
-
-  // Remove any exiting links
-  var linkExit = link.exit().transition()
-      .duration(duration)
-      .attr('d', function(d) {
-        var o = {x: source.x, y: source.y}
-        return diagonal(o, o)
-      })
-      .remove();
-
-  // Store the old positions for transition.
-  nodes.forEach(function(d){
-          d.x0 = d.x;
-    d.y0 = d.y;
+  root.x0 = dy / 2;
+  root.y0 = 0;
+  root.descendants().forEach((d, i) => {
+    d.id = i;
+    d._children = d.children;
+    if (expand === undefined) {
+      if (d.depth && d.data.name.length !== 2) d.children = null;
+      // The nodes under current conditions are not displayed automatically.
+    }
   });
 
-  // Creates a curved (diagonal) path from parent to the child nodes
-  function diagonal(s, d) {
+  let svg = d3.select(target) //Select the body element in the document
+    .append("svg") //Add an svg element
+    .attr("width", width) //Set the width
+    .attr("viewBox", [-margin.left, -margin.top, width, dx])
+    .style("font", "12px sans-serif")
+    .style("user-select", "none");
 
-          path = `M ${s.y} ${s.x}
-            C ${(s.y + d.y) / 2} ${s.x},
-              ${(s.y + d.y) / 2} ${d.x},
-              ${d.y} ${d.x}`
+  const gLink = svg.append("g")
+    .attr("fill", "none")
+    .attr("stroke", "#555")
+    .attr("stroke-opacity", 0.4)
+    .attr("stroke-width", 1.5);
 
-    return path
+  const gNode = svg.append("g")
+    .attr("cursor", "pointer")
+    .attr("pointer-events", "all");
+
+  function update(source) {
+    const duration = d3.event && d3.event.altKey ? 2500 : 250;
+    const nodes = root.descendants().reverse();
+    const links = root.links();
+
+    // Compute the new tree layout.
+    tree(root);
+
+    let left = root;
+    let right = root;
+    root.eachBefore(node => {
+      if (node.x < left.x) left = node;
+      if (node.x > right.x) right = node;
+    });
+
+    const height = right.x - left.x + margin.top + margin.bottom;
+
+    const transition = svg.transition()
+      .duration(duration)
+      .attr("viewBox", [-margin.left, left.x - margin.top, width, height])
+      .tween("resize", window.ResizeObserver ? null : () => () => svg.dispatch("toggle"));
+
+    // Update the nodes.
+    const node = gNode.selectAll("g")
+      .data(nodes, d => d.id);
+
+    // Enter any new nodes at the parent's previous position.
+    const nodeEnter = node.enter().append("g")
+      .attr("transform", d => `translate(${source.y0},${source.x0})`)
+      .attr("fill-opacity", 0)
+      .attr("stroke-opacity", 0)
+      .on("click", d => {
+        d.children = d.children ? null : d._children;
+        update(d);
+      });
+
+    nodeEnter.append("circle")
+      .attr("r", 6)
+      .attr("fill", d => d._children ? "#bf5700" : "#555")
+      .attr("stroke-width", 10);
+
+    nodeEnter.append("text")
+      .attr("dy", "0.31em")
+      .attr("x", d => d._children ? -10 : 10)
+      .attr("text-anchor", d => d._children ? "end" : "start")
+      .text(d => d.data.name)
+      .clone(true).lower()
+      .attr("stroke-linejoin", "round")
+      .attr("stroke-width", 3)
+      .attr("stroke", "white");
+
+    //Transfer the node to the new position
+    const nodeUpdate = node.merge(nodeEnter).transition(transition)
+      .attr("transform", d => `translate(${d.y},${d.x})`)
+      .attr("fill-opacity", 1)
+      .attr("stroke-opacity", 1);
+
+    // Transition exiting nodes to the parent's new position.
+    const nodeExit = node.exit().transition(transition).remove()
+      .attr("transform", d => `translate(${source.y},${source.x})`)
+      .attr("fill-opacity", 0)
+      .attr("stroke-opacity", 0);
+
+    // Update the links…
+    const link = gLink.selectAll("path")
+      .data(links, d => d.target.id);
+
+    // Enter any new links at the parent's previous position.
+    const linkEnter = link.enter().append("path")
+      .attr("d", d => {
+        const o = { x: source.x0, y: source.y0 };
+        return diagonal({ source: o, target: o });
+      });
+
+    // Transition links to their new position.
+    link.merge(linkEnter).transition(transition)
+      .attr("d", diagonal);
+
+    // Transition exiting nodes to the parent's new position.
+    link.exit().transition(transition).remove()
+      .attr("d", d => {
+        const o = { x: source.x, y: source.y };
+        return diagonal({ source: o, target: o });
+      });
+
+    // Stash the old positions for transition.
+    root.eachBefore(d => {
+      d.x0 = d.x;
+      d.y0 = d.y;
+    });
   }
 
-  // Toggle children on click.
-  function click(d) {
-    if (d.children) {
-          d._children = d.children;
-        d.children = null;
-      } else {
-          d.children = d._children;
-        d._children = null;
-      }
-    update(d);
-  }
+  update(root);
+
+  return svg.node();
 }
-}
+
+margin = ({ top: 10, right: 120, bottom: 10, left: 100 });
+let width = 2500; //width of the canvas
+dy = 300; //distance between left and right nodes
+dx = 17; //The distance between the top and bottom of the node
+
+tree = d3.tree().nodeSize([dx, dy]);
+diagonal = d3.linkHorizontal().x(d => d.y).y(d => d.x);

@@ -17,7 +17,7 @@
             ]
         }
     },
-    "require": {
+    "require-dev": {
         "justinrainbow/json-schema": "^5.2"
     }
 }
