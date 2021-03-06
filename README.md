@@ -9,6 +9,7 @@ This is a simple PHP library that will take a standard ``composer.json`` file an
 * [Complex tree](#complex-tree)
 * [Basic usage](#basic-usage)
 * [Similar libraries](#similar-libraries)
+* [Drupal integration](#drupal-integration)
 
 ## Demo
 
@@ -64,3 +65,6 @@ use markfullmer\DependencyTree;
 * https://github.com/fzaninotto/DependencyWheel : "This experiment visualizes package dependencies using an interactive disc. Each disc section represents a dependency, and links between arcs materialize these dependencies."
 
 * https://github.com/clue/graph-composer : "Graph visualization for your project's `composer.json` and its dependencies"
+
+## Drupal integration
+A Drupal module that provides this functionality to sites directly is available at https://drupal.org/project/composer_dependency_tree
