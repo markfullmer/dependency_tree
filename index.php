@@ -55,12 +55,6 @@ echo '
   <span>Click colored circles to expand/collapse dependencies.</span>
   <figure id="tree"></figure>
 </div>
-<script>
-  var json = document.getElementById("json");
-  var myCodeMirror = CodeMirror.fromTextArea(json, { "theme": "ambiance" });
-  var lock = document.getElementById("lock");
-  var myCodeMirror = CodeMirror.fromTextArea(lock, {"theme": "ambiance"});
-</script>
 ';
 
 $print = TRUE;

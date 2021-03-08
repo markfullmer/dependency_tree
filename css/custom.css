@@ -6,9 +6,11 @@
 nav {
   border-bottom: 1px solid #3d3d3d;
 }
-.Codemirror .c-s-ambiance {
+textarea {
   font-size: 1rem!important;
   height: 200px;
+  background: #3d3d3d;
+  color: #fff;
 }
 input[type="checkbox"] {
   margin-right: 1rem;
