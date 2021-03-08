@@ -14,9 +14,9 @@ include 'head.html';
 $json_lock = file_get_contents('./data/composer.lock');
 $json_root = file_get_contents('./data/composer.json');
 
-if (isset($_POST['root']) && isset($_POST['lock'])) {
+if (isset($_POST['json']) && isset($_POST['lock'])) {
   $json_lock = $_POST['lock'];
-  $json_root = $_POST['root'];
+  $json_root = $_POST['json'];
 }
 $checked = '';
 $version = FALSE;
