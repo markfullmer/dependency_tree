@@ -1,0 +1,2134 @@
+{
+  "name": "composer.json",
+  "children": [
+    {
+      "name": "composer\/installers",
+      "children": [
+        {
+          "name": "composer-plugin-api",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "cweagans\/composer-patches",
+      "children": [
+        {
+          "name": "composer-plugin-api",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "drupal\/adminimal_theme",
+      "children": []
+    },
+    {
+      "name": "drupal\/allow_iframed_site",
+      "children": []
+    },
+    {
+      "name": "drupal\/better_exposed_filters",
+      "children": []
+    },
+    {
+      "name": "drupal\/captcha",
+      "children": []
+    },
+    {
+      "name": "drupal\/config_filter",
+      "children": []
+    },
+    {
+      "name": "drupal\/core-composer-scaffold",
+      "children": [
+        {
+          "name": "composer-plugin-api",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "drupal\/core-recommended",
+      "children": [
+        {
+          "name": "asm89\/stack-cors",
+          "children": [
+            {
+              "name": "symfony\/http-foundation",
+              "children": [
+                {
+                  "name": "symfony\/mime",
+                  "children": [
+                    {
+                      "name": "symfony\/polyfill-intl-idn",
+                      "children": [
+                        {
+                          "name": "symfony\/polyfill-intl-normalizer",
+                          "children": []
+                        },
+                        {
+                          "name": "symfony\/polyfill-php72",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "symfony\/polyfill-mbstring",
+                      "children": []
+                    },
+                    {
+                      "name": "symfony\/polyfill-php80",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "symfony\/polyfill-mbstring",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "symfony\/http-kernel",
+              "children": [
+                {
+                  "name": "psr\/log",
+                  "children": []
+                },
+                {
+                  "name": "symfony\/error-handler",
+                  "children": [
+                    {
+                      "name": "psr\/log",
+                      "children": []
+                    },
+                    {
+                      "name": "symfony\/debug",
+                      "children": [
+                        {
+                          "name": "psr\/log",
+                          "children": []
+                        },
+                        {
+                          "name": "symfony\/polyfill-php80",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "symfony\/polyfill-php80",
+                      "children": []
+                    },
+                    {
+                      "name": "symfony\/var-dumper",
+                      "children": [
+                        {
+                          "name": "symfony\/polyfill-mbstring",
+                          "children": []
+                        },
+                        {
+                          "name": "symfony\/polyfill-php80",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "symfony\/event-dispatcher",
+                  "children": [
+                    {
+                      "name": "symfony\/event-dispatcher-contracts",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "symfony\/http-client-contracts",
+                  "children": []
+                },
+                {
+                  "name": "symfony\/http-foundation",
+                  "children": [
+                    {
+                      "name": "symfony\/mime",
+                      "children": [
+                        {
+                          "name": "symfony\/polyfill-intl-idn",
+                          "children": []
+                        },
+                        {
+                          "name": "symfony\/polyfill-mbstring",
+                          "children": []
+                        },
+                        {
+                          "name": "symfony\/polyfill-php80",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "symfony\/polyfill-mbstring",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "symfony\/polyfill-ctype",
+                  "children": []
+                },
+                {
+                  "name": "symfony\/polyfill-php73",
+                  "children": []
+                },
+                {
+                  "name": "symfony\/polyfill-php80",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "composer\/semver",
+          "children": []
+        },
+        {
+          "name": "doctrine\/annotations",
+          "children": [
+            {
+              "name": "doctrine\/lexer",
+              "children": []
+            },
+            {
+              "name": "ext-tokenizer",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "doctrine\/lexer",
+          "children": []
+        },
+        {
+          "name": "doctrine\/reflection",
+          "children": [
+            {
+              "name": "doctrine\/annotations",
+              "children": [
+                {
+                  "name": "doctrine\/lexer",
+                  "children": []
+                },
+                {
+                  "name": "ext-tokenizer",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "ext-tokenizer",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "egulias\/email-validator",
+          "children": [
+            {
+              "name": "doctrine\/lexer",
+              "children": []
+            },
+            {
+              "name": "symfony\/polyfill-intl-idn",
+              "children": [
+                {
+                  "name": "symfony\/polyfill-intl-normalizer",
+                  "children": []
+                },
+                {
+                  "name": "symfony\/polyfill-php72",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "guzzlehttp\/guzzle",
+          "children": [
+            {
+              "name": "ext-json",
+              "children": []
+            },
+            {
+              "name": "guzzlehttp\/promises",
+              "children": []
+            },
+            {
+              "name": "guzzlehttp\/psr7",
+              "children": [
+                {
+                  "name": "psr\/http-message",
+                  "children": []
+                },
+                {
+                  "name": "ralouphie\/getallheaders",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "symfony\/polyfill-intl-idn",
+              "children": [
+                {
+                  "name": "symfony\/polyfill-intl-normalizer",
+                  "children": []
+                },
+                {
+                  "name": "symfony\/polyfill-php72",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "guzzlehttp\/promises",
+          "children": []
+        },
+        {
+          "name": "guzzlehttp\/psr7",
+          "children": [
+            {
+              "name": "psr\/http-message",
+              "children": []
+            },
+            {
+              "name": "ralouphie\/getallheaders",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "laminas\/laminas-diactoros",
+          "children": [
+            {
+              "name": "laminas\/laminas-zendframework-bridge",
+              "children": []
+            },
+            {
+              "name": "psr\/http-factory",
+              "children": [
+                {
+                  "name": "psr\/http-message",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "psr\/http-message",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "laminas\/laminas-escaper",
+          "children": [
+            {
+              "name": "laminas\/laminas-zendframework-bridge",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "laminas\/laminas-feed",
+          "children": [
+            {
+              "name": "ext-dom",
+              "children": []
+            },
+            {
+              "name": "ext-libxml",
+              "children": []
+            },
+            {
+              "name": "laminas\/laminas-escaper",
+              "children": [
+                {
+                  "name": "laminas\/laminas-zendframework-bridge",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "laminas\/laminas-stdlib",
+              "children": [
+                {
+                  "name": "laminas\/laminas-zendframework-bridge",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "laminas\/laminas-zendframework-bridge",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "laminas\/laminas-stdlib",
+          "children": [
+            {
+              "name": "laminas\/laminas-zendframework-bridge",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "laminas\/laminas-zendframework-bridge",
+          "children": []
+        },
+        {
+          "name": "masterminds\/html5",
+          "children": [
+            {
+              "name": "ext-ctype",
+              "children": []
+            },
+            {
+              "name": "ext-dom",
+              "children": []
+            },
+            {
+              "name": "ext-libxml",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "pear\/archive_tar",
+          "children": [
+            {
+              "name": "pear\/pear-core-minimal",
+              "children": [
+                {
+                  "name": "pear\/console_getopt",
+                  "children": []
+                },
+                {
+                  "name": "pear\/pear_exception",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "pear\/console_getopt",
+          "children": []
+        },
+        {
+          "name": "pear\/pear-core-minimal",
+          "children": [
+            {
+              "name": "pear\/console_getopt",
+              "children": []
+            },
+            {
+              "name": "pear\/pear_exception",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "pear\/pear_exception",
+          "children": []
+        },
+        {
+          "name": "psr\/container",
+          "children": []
+        },
+        {
+          "name": "psr\/http-factory",
+          "children": [
+            {
+              "name": "psr\/http-message",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "psr\/http-message",
+          "children": []
+        },
+        {
+          "name": "psr\/log",
+          "children": []
+        },
+        {
+          "name": "ralouphie\/getallheaders",
+          "children": []
+        },
+        {
+          "name": "stack\/builder",
+          "children": [
+            {
+              "name": "symfony\/http-foundation",
+              "children": [
+                {
+                  "name": "symfony\/mime",
+                  "children": [
+                    {
+                      "name": "symfony\/polyfill-intl-idn",
+                      "children": [
+                        {
+                          "name": "symfony\/polyfill-intl-normalizer",
+                          "children": []
+                        },
+                        {
+                          "name": "symfony\/polyfill-php72",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "symfony\/polyfill-mbstring",
+                      "children": []
+                    },
+                    {
+                      "name": "symfony\/polyfill-php80",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "symfony\/polyfill-mbstring",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "symfony\/http-kernel",
+              "children": [
+                {
+                  "name": "psr\/log",
+                  "children": []
+                },
+                {
+                  "name": "symfony\/error-handler",
+                  "children": [
+                    {
+                      "name": "psr\/log",
+                      "children": []
+                    },
+                    {
+                      "name": "symfony\/debug",
+                      "children": [
+                        {
+                          "name": "psr\/log",
+                          "children": []
+                        },
+                        {
+                          "name": "symfony\/polyfill-php80",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "symfony\/polyfill-php80",
+                      "children": []
+                    },
+                    {
+                      "name": "symfony\/var-dumper",
+                      "children": [
+                        {
+                          "name": "symfony\/polyfill-mbstring",
+                          "children": []
+                        },
+                        {
+                          "name": "symfony\/polyfill-php80",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "symfony\/event-dispatcher",
+                  "children": [
+                    {
+                      "name": "symfony\/event-dispatcher-contracts",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "symfony\/http-client-contracts",
+                  "children": []
+                },
+                {
+                  "name": "symfony\/http-foundation",
+                  "children": [
+                    {
+                      "name": "symfony\/mime",
+                      "children": [
+                        {
+                          "name": "symfony\/polyfill-intl-idn",
+                          "children": []
+                        },
+                        {
+                          "name": "symfony\/polyfill-mbstring",
+                          "children": []
+                        },
+                        {
+                          "name": "symfony\/polyfill-php80",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "symfony\/polyfill-mbstring",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "symfony\/polyfill-ctype",
+                  "children": []
+                },
+                {
+                  "name": "symfony\/polyfill-php73",
+                  "children": []
+                },
+                {
+                  "name": "symfony\/polyfill-php80",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "symfony-cmf\/routing",
+          "children": [
+            {
+              "name": "psr\/log",
+              "children": []
+            },
+            {
+              "name": "symfony\/http-kernel",
+              "children": [
+                {
+                  "name": "psr\/log",
+                  "children": []
+                },
+                {
+                  "name": "symfony\/error-handler",
+                  "children": [
+                    {
+                      "name": "psr\/log",
+                      "children": []
+                    },
+                    {
+                      "name": "symfony\/debug",
+                      "children": [
+                        {
+                          "name": "psr\/log",
+                          "children": []
+                        },
+                        {
+                          "name": "symfony\/polyfill-php80",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "symfony\/polyfill-php80",
+                      "children": []
+                    },
+                    {
+                      "name": "symfony\/var-dumper",
+                      "children": [
+                        {
+                          "name": "symfony\/polyfill-mbstring",
+                          "children": []
+                        },
+                        {
+                          "name": "symfony\/polyfill-php80",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "symfony\/event-dispatcher",
+                  "children": [
+                    {
+                      "name": "symfony\/event-dispatcher-contracts",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "symfony\/http-client-contracts",
+                  "children": []
+                },
+                {
+                  "name": "symfony\/http-foundation",
+                  "children": [
+                    {
+                      "name": "symfony\/mime",
+                      "children": [
+                        {
+                          "name": "symfony\/polyfill-intl-idn",
+                          "children": []
+                        },
+                        {
+                          "name": "symfony\/polyfill-mbstring",
+                          "children": []
+                        },
+                        {
+                          "name": "symfony\/polyfill-php80",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "symfony\/polyfill-mbstring",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "symfony\/polyfill-ctype",
+                  "children": []
+                },
+                {
+                  "name": "symfony\/polyfill-php73",
+                  "children": []
+                },
+                {
+                  "name": "symfony\/polyfill-php80",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "symfony\/routing",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "symfony\/console",
+          "children": [
+            {
+              "name": "symfony\/polyfill-mbstring",
+              "children": []
+            },
+            {
+              "name": "symfony\/polyfill-php73",
+              "children": []
+            },
+            {
+              "name": "symfony\/polyfill-php80",
+              "children": []
+            },
+            {
+              "name": "symfony\/service-contracts",
+              "children": [
+                {
+                  "name": "psr\/container",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "symfony\/debug",
+          "children": [
+            {
+              "name": "psr\/log",
+              "children": []
+            },
+            {
+              "name": "symfony\/polyfill-php80",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "symfony\/dependency-injection",
+          "children": [
+            {
+              "name": "psr\/container",
+              "children": []
+            },
+            {
+              "name": "symfony\/service-contracts",
+              "children": [
+                {
+                  "name": "psr\/container",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "symfony\/error-handler",
+          "children": [
+            {
+              "name": "psr\/log",
+              "children": []
+            },
+            {
+              "name": "symfony\/debug",
+              "children": [
+                {
+                  "name": "psr\/log",
+                  "children": []
+                },
+                {
+                  "name": "symfony\/polyfill-php80",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "symfony\/polyfill-php80",
+              "children": []
+            },
+            {
+              "name": "symfony\/var-dumper",
+              "children": [
+                {
+                  "name": "symfony\/polyfill-mbstring",
+                  "children": []
+                },
+                {
+                  "name": "symfony\/polyfill-php80",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "symfony\/event-dispatcher",
+          "children": [
+            {
+              "name": "symfony\/event-dispatcher-contracts",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "symfony\/event-dispatcher-contracts",
+          "children": []
+        },
+        {
+          "name": "symfony\/http-client-contracts",
+          "children": []
+        },
+        {
+          "name": "symfony\/http-foundation",
+          "children": [
+            {
+              "name": "symfony\/mime",
+              "children": [
+                {
+                  "name": "symfony\/polyfill-intl-idn",
+                  "children": [
+                    {
+                      "name": "symfony\/polyfill-intl-normalizer",
+                      "children": []
+                    },
+                    {
+                      "name": "symfony\/polyfill-php72",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "symfony\/polyfill-mbstring",
+                  "children": []
+                },
+                {
+                  "name": "symfony\/polyfill-php80",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "symfony\/polyfill-mbstring",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "symfony\/http-kernel",
+          "children": [
+            {
+              "name": "psr\/log",
+              "children": []
+            },
+            {
+              "name": "symfony\/error-handler",
+              "children": [
+                {
+                  "name": "psr\/log",
+                  "children": []
+                },
+                {
+                  "name": "symfony\/debug",
+                  "children": [
+                    {
+                      "name": "psr\/log",
+                      "children": []
+                    },
+                    {
+                      "name": "symfony\/polyfill-php80",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "symfony\/polyfill-php80",
+                  "children": []
+                },
+                {
+                  "name": "symfony\/var-dumper",
+                  "children": [
+                    {
+                      "name": "symfony\/polyfill-mbstring",
+                      "children": []
+                    },
+                    {
+                      "name": "symfony\/polyfill-php80",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "symfony\/event-dispatcher",
+              "children": [
+                {
+                  "name": "symfony\/event-dispatcher-contracts",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "symfony\/http-client-contracts",
+              "children": []
+            },
+            {
+              "name": "symfony\/http-foundation",
+              "children": [
+                {
+                  "name": "symfony\/mime",
+                  "children": [
+                    {
+                      "name": "symfony\/polyfill-intl-idn",
+                      "children": [
+                        {
+                          "name": "symfony\/polyfill-intl-normalizer",
+                          "children": []
+                        },
+                        {
+                          "name": "symfony\/polyfill-php72",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "symfony\/polyfill-mbstring",
+                      "children": []
+                    },
+                    {
+                      "name": "symfony\/polyfill-php80",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "symfony\/polyfill-mbstring",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "symfony\/polyfill-ctype",
+              "children": []
+            },
+            {
+              "name": "symfony\/polyfill-php73",
+              "children": []
+            },
+            {
+              "name": "symfony\/polyfill-php80",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "symfony\/mime",
+          "children": [
+            {
+              "name": "symfony\/polyfill-intl-idn",
+              "children": [
+                {
+                  "name": "symfony\/polyfill-intl-normalizer",
+                  "children": []
+                },
+                {
+                  "name": "symfony\/polyfill-php72",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "symfony\/polyfill-mbstring",
+              "children": []
+            },
+            {
+              "name": "symfony\/polyfill-php80",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "symfony\/polyfill-ctype",
+          "children": []
+        },
+        {
+          "name": "symfony\/polyfill-iconv",
+          "children": []
+        },
+        {
+          "name": "symfony\/polyfill-intl-idn",
+          "children": [
+            {
+              "name": "symfony\/polyfill-intl-normalizer",
+              "children": []
+            },
+            {
+              "name": "symfony\/polyfill-php72",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "symfony\/polyfill-intl-normalizer",
+          "children": []
+        },
+        {
+          "name": "symfony\/polyfill-mbstring",
+          "children": []
+        },
+        {
+          "name": "symfony\/polyfill-php80",
+          "children": []
+        },
+        {
+          "name": "symfony\/process",
+          "children": []
+        },
+        {
+          "name": "symfony\/psr-http-message-bridge",
+          "children": [
+            {
+              "name": "psr\/http-message",
+              "children": []
+            },
+            {
+              "name": "symfony\/http-foundation",
+              "children": [
+                {
+                  "name": "symfony\/mime",
+                  "children": [
+                    {
+                      "name": "symfony\/polyfill-intl-idn",
+                      "children": [
+                        {
+                          "name": "symfony\/polyfill-intl-normalizer",
+                          "children": []
+                        },
+                        {
+                          "name": "symfony\/polyfill-php72",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "symfony\/polyfill-mbstring",
+                      "children": []
+                    },
+                    {
+                      "name": "symfony\/polyfill-php80",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "symfony\/polyfill-mbstring",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "symfony\/routing",
+          "children": []
+        },
+        {
+          "name": "symfony\/serializer",
+          "children": [
+            {
+              "name": "symfony\/polyfill-ctype",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "symfony\/service-contracts",
+          "children": [
+            {
+              "name": "psr\/container",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "symfony\/translation",
+          "children": [
+            {
+              "name": "symfony\/polyfill-mbstring",
+              "children": []
+            },
+            {
+              "name": "symfony\/translation-contracts",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "symfony\/translation-contracts",
+          "children": []
+        },
+        {
+          "name": "symfony\/validator",
+          "children": [
+            {
+              "name": "symfony\/polyfill-ctype",
+              "children": []
+            },
+            {
+              "name": "symfony\/polyfill-mbstring",
+              "children": []
+            },
+            {
+              "name": "symfony\/translation-contracts",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "symfony\/var-dumper",
+          "children": [
+            {
+              "name": "symfony\/polyfill-mbstring",
+              "children": []
+            },
+            {
+              "name": "symfony\/polyfill-php80",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "symfony\/yaml",
+          "children": [
+            {
+              "name": "symfony\/polyfill-ctype",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "twig\/twig",
+          "children": [
+            {
+              "name": "symfony\/polyfill-ctype",
+              "children": []
+            },
+            {
+              "name": "symfony\/polyfill-mbstring",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "typo3\/phar-stream-wrapper",
+          "children": [
+            {
+              "name": "ext-json",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "drupal\/facets",
+      "children": []
+    },
+    {
+      "name": "drupal\/features",
+      "children": [
+        {
+          "name": "drupal\/config_update",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "drupal\/honeypot",
+      "children": []
+    },
+    {
+      "name": "drupal\/login_emailusername",
+      "children": []
+    },
+    {
+      "name": "drupal\/mailsystem",
+      "children": []
+    },
+    {
+      "name": "drupal\/plupload",
+      "children": []
+    },
+    {
+      "name": "drupal\/rabbit_hole",
+      "children": []
+    },
+    {
+      "name": "drupal\/recaptcha",
+      "children": [
+        {
+          "name": "drupal\/captcha",
+          "children": []
+        },
+        {
+          "name": "google\/recaptcha",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "drupal\/redirect_after_login",
+      "children": []
+    },
+    {
+      "name": "drupal\/reroute_email",
+      "children": []
+    },
+    {
+      "name": "drupal\/restui",
+      "children": []
+    },
+    {
+      "name": "drupal\/role_delegation",
+      "children": []
+    },
+    {
+      "name": "drupal\/search_api",
+      "children": []
+    },
+    {
+      "name": "drupal\/simple_oauth",
+      "children": [
+        {
+          "name": "drupal\/consumers",
+          "children": []
+        },
+        {
+          "name": "league\/oauth2-server",
+          "children": [
+            {
+              "name": "defuse\/php-encryption",
+              "children": [
+                {
+                  "name": "ext-openssl",
+                  "children": []
+                },
+                {
+                  "name": "paragonie\/random_compat",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "ext-json",
+              "children": []
+            },
+            {
+              "name": "ext-openssl",
+              "children": []
+            },
+            {
+              "name": "lcobucci\/jwt",
+              "children": [
+                {
+                  "name": "ext-mbstring",
+                  "children": []
+                },
+                {
+                  "name": "ext-openssl",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "league\/event",
+              "children": []
+            },
+            {
+              "name": "psr\/http-message",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "steverhoades\/oauth2-openid-connect-server",
+          "children": [
+            {
+              "name": "lcobucci\/jwt",
+              "children": [
+                {
+                  "name": "ext-mbstring",
+                  "children": []
+                },
+                {
+                  "name": "ext-openssl",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "league\/oauth2-server",
+              "children": [
+                {
+                  "name": "defuse\/php-encryption",
+                  "children": [
+                    {
+                      "name": "ext-openssl",
+                      "children": []
+                    },
+                    {
+                      "name": "paragonie\/random_compat",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "ext-json",
+                  "children": []
+                },
+                {
+                  "name": "ext-openssl",
+                  "children": []
+                },
+                {
+                  "name": "lcobucci\/jwt",
+                  "children": [
+                    {
+                      "name": "ext-mbstring",
+                      "children": []
+                    },
+                    {
+                      "name": "ext-openssl",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "league\/event",
+                  "children": []
+                },
+                {
+                  "name": "psr\/http-message",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "drupal\/smtp",
+      "children": [
+        {
+          "name": "phpmailer\/phpmailer",
+          "children": [
+            {
+              "name": "ext-ctype",
+              "children": []
+            },
+            {
+              "name": "ext-filter",
+              "children": []
+            },
+            {
+              "name": "ext-hash",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "drupal\/token",
+      "children": []
+    },
+    {
+      "name": "drupal\/userprotect",
+      "children": []
+    },
+    {
+      "name": "drupal\/views_data_export",
+      "children": [
+        {
+          "name": "drupal\/csv_serialization",
+          "children": [
+            {
+              "name": "league\/csv",
+              "children": [
+                {
+                  "name": "ext-json",
+                  "children": []
+                },
+                {
+                  "name": "ext-mbstring",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "drush\/drush",
+      "children": [
+        {
+          "name": "chi-teck\/drupal-code-generator",
+          "children": [
+            {
+              "name": "ext-json",
+              "children": []
+            },
+            {
+              "name": "symfony\/console",
+              "children": [
+                {
+                  "name": "symfony\/polyfill-mbstring",
+                  "children": []
+                },
+                {
+                  "name": "symfony\/polyfill-php73",
+                  "children": []
+                },
+                {
+                  "name": "symfony\/polyfill-php80",
+                  "children": []
+                },
+                {
+                  "name": "symfony\/service-contracts",
+                  "children": [
+                    {
+                      "name": "psr\/container",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "symfony\/filesystem",
+              "children": [
+                {
+                  "name": "symfony\/polyfill-ctype",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "twig\/twig",
+              "children": [
+                {
+                  "name": "symfony\/polyfill-ctype",
+                  "children": []
+                },
+                {
+                  "name": "symfony\/polyfill-mbstring",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "composer\/semver",
+          "children": []
+        },
+        {
+          "name": "consolidation\/config",
+          "children": [
+            {
+              "name": "dflydev\/dot-access-data",
+              "children": []
+            },
+            {
+              "name": "grasmash\/expander",
+              "children": [
+                {
+                  "name": "dflydev\/dot-access-data",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "consolidation\/filter-via-dot-access-data",
+          "children": [
+            {
+              "name": "dflydev\/dot-access-data",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "consolidation\/robo",
+          "children": [
+            {
+              "name": "consolidation\/annotated-command",
+              "children": [
+                {
+                  "name": "consolidation\/output-formatters",
+                  "children": [
+                    {
+                      "name": "dflydev\/dot-access-data",
+                      "children": []
+                    },
+                    {
+                      "name": "symfony\/console",
+                      "children": [
+                        {
+                          "name": "symfony\/polyfill-mbstring",
+                          "children": []
+                        },
+                        {
+                          "name": "symfony\/polyfill-php73",
+                          "children": []
+                        },
+                        {
+                          "name": "symfony\/polyfill-php80",
+                          "children": []
+                        },
+                        {
+                          "name": "symfony\/service-contracts",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "symfony\/finder",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "psr\/log",
+                  "children": []
+                },
+                {
+                  "name": "symfony\/console",
+                  "children": [
+                    {
+                      "name": "symfony\/polyfill-mbstring",
+                      "children": []
+                    },
+                    {
+                      "name": "symfony\/polyfill-php73",
+                      "children": []
+                    },
+                    {
+                      "name": "symfony\/polyfill-php80",
+                      "children": []
+                    },
+                    {
+                      "name": "symfony\/service-contracts",
+                      "children": [
+                        {
+                          "name": "psr\/container",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "symfony\/event-dispatcher",
+                  "children": [
+                    {
+                      "name": "symfony\/event-dispatcher-contracts",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "symfony\/finder",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "consolidation\/config",
+              "children": [
+                {
+                  "name": "dflydev\/dot-access-data",
+                  "children": []
+                },
+                {
+                  "name": "grasmash\/expander",
+                  "children": [
+                    {
+                      "name": "dflydev\/dot-access-data",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "consolidation\/log",
+              "children": [
+                {
+                  "name": "psr\/log",
+                  "children": []
+                },
+                {
+                  "name": "symfony\/console",
+                  "children": [
+                    {
+                      "name": "symfony\/polyfill-mbstring",
+                      "children": []
+                    },
+                    {
+                      "name": "symfony\/polyfill-php73",
+                      "children": []
+                    },
+                    {
+                      "name": "symfony\/polyfill-php80",
+                      "children": []
+                    },
+                    {
+                      "name": "symfony\/service-contracts",
+                      "children": [
+                        {
+                          "name": "psr\/container",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "consolidation\/output-formatters",
+              "children": [
+                {
+                  "name": "dflydev\/dot-access-data",
+                  "children": []
+                },
+                {
+                  "name": "symfony\/console",
+                  "children": [
+                    {
+                      "name": "symfony\/polyfill-mbstring",
+                      "children": []
+                    },
+                    {
+                      "name": "symfony\/polyfill-php73",
+                      "children": []
+                    },
+                    {
+                      "name": "symfony\/polyfill-php80",
+                      "children": []
+                    },
+                    {
+                      "name": "symfony\/service-contracts",
+                      "children": [
+                        {
+                          "name": "psr\/container",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "symfony\/finder",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "consolidation\/self-update",
+              "children": [
+                {
+                  "name": "symfony\/console",
+                  "children": [
+                    {
+                      "name": "symfony\/polyfill-mbstring",
+                      "children": []
+                    },
+                    {
+                      "name": "symfony\/polyfill-php73",
+                      "children": []
+                    },
+                    {
+                      "name": "symfony\/polyfill-php80",
+                      "children": []
+                    },
+                    {
+                      "name": "symfony\/service-contracts",
+                      "children": [
+                        {
+                          "name": "psr\/container",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "symfony\/filesystem",
+                  "children": [
+                    {
+                      "name": "symfony\/polyfill-ctype",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "league\/container",
+              "children": [
+                {
+                  "name": "container-interop\/container-interop",
+                  "children": [
+                    {
+                      "name": "psr\/container",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "symfony\/console",
+              "children": [
+                {
+                  "name": "symfony\/polyfill-mbstring",
+                  "children": []
+                },
+                {
+                  "name": "symfony\/polyfill-php73",
+                  "children": []
+                },
+                {
+                  "name": "symfony\/polyfill-php80",
+                  "children": []
+                },
+                {
+                  "name": "symfony\/service-contracts",
+                  "children": [
+                    {
+                      "name": "psr\/container",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "symfony\/event-dispatcher",
+              "children": [
+                {
+                  "name": "symfony\/event-dispatcher-contracts",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "symfony\/filesystem",
+              "children": [
+                {
+                  "name": "symfony\/polyfill-ctype",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "symfony\/finder",
+              "children": []
+            },
+            {
+              "name": "symfony\/process",
+              "children": []
+            },
+            {
+              "name": "symfony\/yaml",
+              "children": [
+                {
+                  "name": "symfony\/polyfill-ctype",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "consolidation\/site-alias",
+          "children": [
+            {
+              "name": "consolidation\/config",
+              "children": [
+                {
+                  "name": "dflydev\/dot-access-data",
+                  "children": []
+                },
+                {
+                  "name": "grasmash\/expander",
+                  "children": [
+                    {
+                      "name": "dflydev\/dot-access-data",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "consolidation\/site-process",
+          "children": [
+            {
+              "name": "consolidation\/config",
+              "children": [
+                {
+                  "name": "dflydev\/dot-access-data",
+                  "children": []
+                },
+                {
+                  "name": "grasmash\/expander",
+                  "children": [
+                    {
+                      "name": "dflydev\/dot-access-data",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "consolidation\/site-alias",
+              "children": [
+                {
+                  "name": "consolidation\/config",
+                  "children": [
+                    {
+                      "name": "dflydev\/dot-access-data",
+                      "children": []
+                    },
+                    {
+                      "name": "grasmash\/expander",
+                      "children": [
+                        {
+                          "name": "dflydev\/dot-access-data",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "symfony\/process",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "ext-dom",
+          "children": []
+        },
+        {
+          "name": "grasmash\/yaml-expander",
+          "children": [
+            {
+              "name": "dflydev\/dot-access-data",
+              "children": []
+            },
+            {
+              "name": "symfony\/yaml",
+              "children": [
+                {
+                  "name": "symfony\/polyfill-ctype",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "guzzlehttp\/guzzle",
+          "children": [
+            {
+              "name": "ext-json",
+              "children": []
+            },
+            {
+              "name": "guzzlehttp\/promises",
+              "children": []
+            },
+            {
+              "name": "guzzlehttp\/psr7",
+              "children": [
+                {
+                  "name": "psr\/http-message",
+                  "children": []
+                },
+                {
+                  "name": "ralouphie\/getallheaders",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "symfony\/polyfill-intl-idn",
+              "children": [
+                {
+                  "name": "symfony\/polyfill-intl-normalizer",
+                  "children": []
+                },
+                {
+                  "name": "symfony\/polyfill-php72",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "league\/container",
+          "children": [
+            {
+              "name": "container-interop\/container-interop",
+              "children": [
+                {
+                  "name": "psr\/container",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "psr\/log",
+          "children": []
+        },
+        {
+          "name": "psy\/psysh",
+          "children": [
+            {
+              "name": "dnoegel\/php-xdg-base-dir",
+              "children": []
+            },
+            {
+              "name": "ext-json",
+              "children": []
+            },
+            {
+              "name": "ext-tokenizer",
+              "children": []
+            },
+            {
+              "name": "nikic\/php-parser",
+              "children": [
+                {
+                  "name": "ext-tokenizer",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "symfony\/console",
+              "children": [
+                {
+                  "name": "symfony\/polyfill-mbstring",
+                  "children": []
+                },
+                {
+                  "name": "symfony\/polyfill-php73",
+                  "children": []
+                },
+                {
+                  "name": "symfony\/polyfill-php80",
+                  "children": []
+                },
+                {
+                  "name": "symfony\/service-contracts",
+                  "children": [
+                    {
+                      "name": "psr\/container",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "symfony\/var-dumper",
+              "children": [
+                {
+                  "name": "symfony\/polyfill-mbstring",
+                  "children": []
+                },
+                {
+                  "name": "symfony\/polyfill-php80",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "symfony\/event-dispatcher",
+          "children": [
+            {
+              "name": "symfony\/event-dispatcher-contracts",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "symfony\/finder",
+          "children": []
+        },
+        {
+          "name": "symfony\/var-dumper",
+          "children": [
+            {
+              "name": "symfony\/polyfill-mbstring",
+              "children": []
+            },
+            {
+              "name": "symfony\/polyfill-php80",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "symfony\/yaml",
+          "children": [
+            {
+              "name": "symfony\/polyfill-ctype",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "webflo\/drupal-finder",
+          "children": [
+            {
+              "name": "ext-json",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "webmozart\/path-util",
+          "children": [
+            {
+              "name": "webmozart\/assert",
+              "children": [
+                {
+                  "name": "symfony\/polyfill-ctype",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "lcobucci\/jwt",
+      "children": [
+        {
+          "name": "ext-mbstring",
+          "children": []
+        },
+        {
+          "name": "ext-openssl",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "moxiecode\/plupload",
+      "children": []
+    },
+    {
+      "name": "writecrow\/basecamp_api",
+      "children": []
+    },
+    {
+      "name": "writecrow\/country_code_converter",
+      "children": []
+    },
+    {
+      "name": "writecrow\/highlighter",
+      "children": []
+    },
+    {
+      "name": "writecrow\/lorem_gutenberg",
+      "children": []
+    },
+    {
+      "name": "writecrow\/rest_feedback_endpoint",
+      "children": []
+    },
+    {
+      "name": "writecrow\/tag_converter",
+      "children": []
+    }
+  ]
+}

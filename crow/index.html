@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Crow dependency tree visualization</title>
+  <style>
+    body {
+        margin: 0;
+        font-family: "Open Sans", sans-serif;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+  <script src='https://d3js.org/d3.v5.min.js'></script>
+  <script src='../js/d3.dependencyTree.js'></script>
+  <script>
+    fetch("./crow.json")
+    .then(response => {
+       return response.json();
+    })
+    .then(data => dependencyTree(data, "figure#tree"));
+    // dependencyTree(' . $data . ', "figure#tree", ' . $expand . ');
+  </script>
+  <div class="container">
+    <h1>Crow dependency visualization</h1>
+    <p>This visualization demonstrates how the <a href="https://crow.corporaproject.org">Crow</a> codebase is assembled.</p>
+    <p><strong>Click the colored nodes to expand their dependencies.</strong></p>
+  </div>
+  <figure id="tree"></figure>
+</body>
