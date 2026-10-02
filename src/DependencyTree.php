@@ -78,10 +78,10 @@ class DependencyTree {
       ];
     }
     $recursion_level++;
-    $skip = ['drupal/core', 'php', 'composer/installers'];
+    $skip = ['php', 'composer/installers'];
     if (in_array($key, array_keys($packages))) {
       foreach (array_keys($packages[$key]['require']) as $package) {
-        if (!in_array($package, $skip)) {
+        if (!in_array($package, $skip) && !str_starts_with($package, 'ext-')) {
           $children = self::getChildren($packages, $package, $recursion_level, $version);
           $name = $package;
           if ($version && isset($packages[$package]['version'])) {

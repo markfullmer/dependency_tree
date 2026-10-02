@@ -10,7 +10,7 @@ require 'vendor/autoload.php';
 use JsonSchema\Validator;
 use markfullmer\DependencyTree;
 
-include 'head.html';
+include 'head.php';
 $json_lock = file_get_contents('./data/composer.lock');
 $json_root = file_get_contents('./data/composer.json');
 
@@ -33,7 +33,7 @@ if (isset($_POST['expanded'])) {
 
 echo '
 <div class="container">
-  <form action="//' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'] . '" method="POST">
+  <form action="//' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] . '" method="POST">
     <div class="row">
       <div class="six columns">
         <label for="json">Paste <code>composer.json</code> here</label>
